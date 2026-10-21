@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>OddTV</title>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232838"/><stop offset="1" stop-color="#0e1014"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a18bff"/><stop offset="1" stop-color="#5a3bf0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="warm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1024" height="1024" rx="220" fill="url(#tile)"/>
+  <!-- antennas -->
+  <g stroke="#b9a8ff" stroke-width="34" stroke-linecap="round">
+    <line x1="512" y1="300" x2="380" y2="150"/><line x1="512" y1="300" x2="650" y2="165"/>
+  </g>
+  <circle cx="380" cy="150" r="30" fill="#b9a8ff"/><circle cx="650" cy="165" r="30" fill="#b9a8ff"/>
+  <!-- glow + bezel + screen -->
+  <rect x="160" y="290" width="704" height="510" rx="120" fill="#7c5cff" opacity=".8" filter="url(#glow)"/>
+  <rect x="136" y="266" width="752" height="558" rx="140" fill="#e8eaf0"/>
+  <rect x="170" y="300" width="684" height="490" rx="110" fill="url(#screen)"/>
+  <!-- the arch -->
+  <path d="M360 790 V562 A152 152 0 0 1 664 562 V790 Z" fill="#151820"/>
+  <!-- play mark -->
+  <polygon points="460,528 460,672 590,600" fill="#ffcc4d" opacity=".6" filter="url(#warm)"/>
+  <polygon points="460,528 460,672 590,600" fill="#ffcc4d"/>
+  <!-- feet -->
+  <rect x="300" y="824" width="60" height="56" rx="18" fill="#e8eaf0"/>
+  <rect x="664" y="824" width="60" height="56" rx="18" fill="#e8eaf0"/>
+</svg>
